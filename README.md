@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # E-Commerce Product Catalog
 
 ## Name
@@ -31,4 +32,3 @@ The application will allow users to:
 * User authentication
 * Online payment integration
 * Product reviews and ratings
-* Order tracking
