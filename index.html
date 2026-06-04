@@ -6,128 +6,233 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>E-Commerce Product Catalog</title>
 
-```
-<!-- CSS File -->
-<link rel="stylesheet" href="css/style.css">
-`<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">``
+    <link rel="stylesheet" href="css/style.css">
 
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
+
 <body>
 
-```
-<!-- Header -->
-<header>
-    <div class="logo">
-        <h1>E-Commerce Product Catalog</h1>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <h1>E-Commerce Product Catalog</h1>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="product-details.html">Product Details</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Cart Counter -->
+    <div class="cart-section">
+        <h2>🛒 Shopping Cart</h2>
+        <p>Items in Cart: <span id="cartCount">0</span></p>
     </div>
 
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="products.html">Products</a></li>
-            <li><a href="product-details.html">Product Details</a></li>
-        </ul>
-    </nav>
-</header>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Discover Amazing Products</h2>
+            <p>
+                Explore a wide range of electronics, fashion,
+                accessories, books, and home essentials.
+            </p>
 
-<!-- Hero Section -->
-<section class="hero">
-    <div class="hero-content">
-        <h2>Discover Amazing Products</h2>
+            <a href="products.html" class="btn">Shop Now</a>
+        </div>
+    </section>
+
+    <!-- Search Box -->
+    <div class="search-box">
+        <input type="text" placeholder="Search products...">
+        <button>Search</button>
+    </div>
+
+    <!-- Categories -->
+    <section class="categories">
+        <h2>Shop by Category</h2>
+
+        <div class="category-container">
+
+            <div class="category-card">
+                <h3>💻 Electronics</h3>
+                <p>Laptops, Smartphones, Headphones & More</p>
+            </div>
+
+            <div class="category-card">
+                <h3>👕 Fashion</h3>
+                <p>Clothing, Shoes, Watches & Accessories</p>
+            </div>
+
+            <div class="category-card">
+                <h3>🏠 Home Appliances</h3>
+                <p>Kitchen and Household Essentials</p>
+            </div>
+
+            <div class="category-card">
+                <h3>📚 Books</h3>
+                <p>Educational and Entertainment Books</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="featured-products">
+
+        <h2>Featured Products</h2>
+
+        <div class="product-container">
+
+            <div class="product-card">
+                <h3>Gaming Laptop</h3>
+                <p>High-performance laptop for gaming and work.</p>
+                <strong>₹75,000</strong>
+            </div>
+
+            <div class="product-card">
+                <h3>Smartphone</h3>
+                <p>Latest smartphone with advanced features.</p>
+                <strong>₹30,000</strong>
+            </div>
+
+            <div class="product-card">
+                <h3>Wireless Headphones</h3>
+                <p>Noise-cancelling premium sound experience.</p>
+                <strong>₹4,999</strong>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Stats -->
+    <section class="stats">
+
+        <div class="stat-card">
+            <h2>500+</h2>
+            <p>Products</p>
+        </div>
+
+        <div class="stat-card">
+            <h2>1000+</h2>
+            <p>Customers</p>
+        </div>
+
+        <div class="stat-card">
+            <h2>50+</h2>
+            <p>Brands</p>
+        </div>
+
+    </section>
+
+    <!-- Top Brands -->
+    <section class="brands">
+
+        <h2>Top Brands</h2>
+
+        <div class="brand-container">
+            <div>Apple</div>
+            <div>Samsung</div>
+            <div>Sony</div>
+            <div>HP</div>
+        </div>
+
+    </section>
+
+    <!-- About -->
+    <section class="about">
+
+        <h2>Why Choose Us?</h2>
+
         <p>
-            Explore a wide range of electronics, fashion,
-            accessories, books, and home essentials.
+            We provide quality products, secure shopping,
+            fast delivery, and excellent customer support
+            to ensure a great shopping experience.
         </p>
 
-        <a href="products.html" class="btn">Shop Now</a>
-    </div>
-</section>
+    </section>
 
-<!-- Categories Section -->
-<section class="categories">
+    <!-- Testimonials -->
+    <section class="testimonials">
 
-    <h2>Shop by Category</h2>
+        <h2>Customer Reviews</h2>
 
-    <div class="category-container">
-
-        <div class="category-card">
-            <h3>💻 Electronics</h3>
-            <p>Laptops, Smartphones, Headphones & More</p>
+        <div class="review-card">
+            ⭐⭐⭐⭐⭐
+            <p>Great quality products and fast delivery.</p>
         </div>
 
-        <div class="category-card">
-            <h3>👕 Fashion</h3>
-            <p>Clothing, Shoes, Watches & Accessories</p>
+        <div class="review-card">
+            ⭐⭐⭐⭐⭐
+            <p>Excellent shopping experience.</p>
         </div>
 
-        <div class="category-card">
-            <h3>🏠 Home Appliances</h3>
-            <p>Kitchen and Household Essentials</p>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+
+        <h2>Subscribe for Updates</h2>
+
+        <input type="email" placeholder="Enter your email">
+
+        <button>Subscribe</button>
+
+    </section>
+
+    <!-- Contact Form -->
+    <section class="contact">
+
+        <h2>Contact Us</h2>
+
+        <form onsubmit="return validateForm()">
+
+            <input
+                type="text"
+                id="name"
+                placeholder="Enter your Name">
+
+            <button type="submit">
+                Submit
+            </button>
+
+        </form>
+
+    </section>
+
+    <!-- Footer -->
+    <footer>
+
+        <div class="footer-content">
+
+            <h3>E-Commerce Product Catalog</h3>
+
+            <p>
+                Your trusted online shopping destination.
+            </p>
+
+            <div class="social-links">
+                <a href="#">Facebook</a>
+                <a href="#">Instagram</a>
+                <a href="#">Twitter</a>
+            </div>
+
+            <p>
+                © 2026 E-Commerce Product Catalog |
+                Designed by Darshana Selvakumar
+            </p>
+
         </div>
 
-        <div class="category-card">
-            <h3>📚 Books</h3>
-            <p>Educational and Entertainment Books</p>
-        </div>
+    </footer>
 
-    </div>
-
-</section>
-
-<!-- Featured Products -->
-<section class="featured-products">
-
-    <h2>Featured Products</h2>
-
-    <div class="product-container">
-
-        <div class="product-card">
-            <h3>Gaming Laptop</h3>
-            <p>High-performance laptop for gaming and work.</p>
-            <strong>₹75,000</strong>
-        </div>
-
-        <div class="product-card">
-            <h3>Smartphone</h3>
-            <p>Latest smartphone with advanced features.</p>
-            <strong>₹30,000</strong>
-        </div>
-
-        <div class="product-card">
-            <h3>Wireless Headphones</h3>
-            <p>Noise-cancelling premium sound experience.</p>
-            <strong>₹4,999</strong>
-        </div>
-
-    </div>
-
-</section>
-
-<!-- About Section -->
-<section class="about">
-
-    <h2>Why Choose Us?</h2>
-
-    <p>
-        We provide quality products, secure shopping,
-        fast delivery, and excellent customer support
-        to ensure a great shopping experience.
-    </p>
-
-</section>
-
-<!-- Footer -->
-<footer>
-    <p>
-        © 2026 E-Commerce Product Catalog |
-        Designed by Darshana Selvakumar
-    </p>
-</footer>
-```
-
-</body>
-</html>
+<script src="script.js"></script>
 <section class="hero">
     <div class="hero-content">
         <h2>Big Summer Sale</h2>
@@ -242,3 +347,11 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         <div>HP</div>
     </div>
 </section>
+<h2>Contact Us</h2>
+
+<form onsubmit="return validateForm()">
+    <input type="text" id="name" placeholder="Enter your Name">
+    <button type="submit">Submit</button>
+</form>
+</body>
+</html>
