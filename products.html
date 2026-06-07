@@ -9,12 +9,39 @@
 <body>
 
 <header>
+
     <h1>Products</h1>
     <nav>
         <a href="index.html">Home</a>
         <a href="products.html">Products</a>
         <a href="product-details.html">Product Details</a>
     </nav>
+
+    <!-- Page Banner -->
+<section class="hero">
+    <div class="hero-content">
+        <h2>🛍️ Explore Our Products</h2>
+        <p>Electronics, Fashion, Home Appliances and More</p>
+    </div>
+</section>
+
+<!-- Stats -->
+<section class="stats">
+    <div class="stat-card">
+        <h2>15+</h2>
+        <p>Products</p>
+    </div>
+
+    <div class="stat-card">
+        <h2>1000+</h2>
+        <p>Customers</p>
+    </div>
+
+    <div class="stat-card">
+        <h2>50+</h2>
+        <p>Brands</p>
+    </div>
+</section>
  </header>
 
  <!-- Search and Filter -->
@@ -46,45 +73,119 @@
     </button>
 </div>
 <div class="product-card" data-category="Laptop">
+
+    <span class="sale-badge">20% OFF</span>
+
     <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=800" alt="Laptop">
+
     <h3>Laptop</h3>
+
+    <div class="rating">
+        ⭐⭐⭐⭐⭐
+    </div>
+
     <p>High-performance laptop for students.</p>
+
     <p><strong>₹75,000</strong></p>
 
-    <button onclick="addToCart('Laptop')">Add to Cart</button>
-    <button onclick="toggleDetails('laptop')">Show Details</button>
+    <button onclick="addToCart('Laptop')">
+        Add to Cart
+    </button>
+
+    <button onclick="toggleDetails('laptop')">
+        Show Details
+    </button>
+
+    <button>
+        ❤️ Wishlist
+    </button>
 
     <div id="laptop" style="display:none;">
         <p>16GB RAM | 512GB SSD | Intel i5 Processor</p>
     </div>
+
 </div>
 
 <div class="product-card" data-category="Smartphone">
-    <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800" alt="Smartphone">
+
+    <span class="sale-badge">15% OFF</span>
+
+    <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800"
+         alt="Smartphone">
+
     <h3>Smartphone</h3>
-    <p>Latest smartphone with advanced features.</p>
+
+    <div class="rating">
+        ⭐⭐⭐⭐⭐
+    </div>
+
+    <p>Latest smartphone with advanced features and premium camera.</p>
+
     <p><strong>₹30,000</strong></p>
 
-    <button onclick="addToCart('Smartphone')">Add to Cart</button>
-    <button onclick="toggleDetails('smartphone')">Show Details</button>
+    <button onclick="addToCart('Smartphone')">
+        🛒 Add to Cart
+    </button>
+
+    <button onclick="toggleDetails('smartphone')">
+        📋 Show Details
+    </button>
+
+    <button>
+        ❤️ Wishlist
+    </button>
 
     <div id="smartphone" style="display:none;">
-        <p>6.7-inch Display | 8GB RAM | 128GB Storage | 50MP Camera</p>
+        <p>
+            ✔ 6.7-inch AMOLED Display<br>
+            ✔ 8GB RAM<br>
+            ✔ 128GB Storage<br>
+            ✔ 50MP Camera<br>
+            ✔ 5000mAh Battery
+        </p>
     </div>
+
 </div>
 
 <div class="product-card" data-category="Headphones">
-    <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=800" alt="Headphones">
-    <h3>Headphones</h3>
-    <p>Wireless headphones with noise cancellation.</p>
+
+    <span class="sale-badge">25% OFF</span>
+
+    <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=800"
+         alt="Headphones">
+
+    <h3>Wireless Headphones</h3>
+
+    <div class="rating">
+        ⭐⭐⭐⭐⭐
+    </div>
+
+    <p>Premium wireless headphones with active noise cancellation.</p>
+
     <p><strong>₹2,000</strong></p>
 
-    <button onclick="addToCart('Headphones')">Add to Cart</button>
-    <button onclick="toggleDetails('headphones')">Show Details</button>
+    <button onclick="addToCart('Headphones')">
+        🛒 Add to Cart
+    </button>
+
+    <button onclick="toggleDetails('headphones')">
+        📋 Show Details
+    </button>
+
+    <button>
+        ❤️ Wishlist
+    </button>
 
     <div id="headphones" style="display:none;">
-        <p>Bluetooth 5.0 | Noise Cancellation | 20-Hour Battery Life</p>
+        <p>
+            ✔ Bluetooth 5.0<br>
+            ✔ Active Noise Cancellation<br>
+            ✔ 20-Hour Battery Life<br>
+            ✔ Fast Charging<br>
+            ✔ Premium Sound Quality
+        </p>
     </div>
+
 </div>
 <script src="script.js"></script>
 </body>
