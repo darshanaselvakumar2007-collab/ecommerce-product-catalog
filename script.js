@@ -114,3 +114,17 @@ function validateForm() {
 
     return true;
 }
+
+function toggleTheme() {
+
+    document.body.classList.toggle("dark-mode");
+
+    let btn = document.querySelector(".theme-btn");
+
+    if(document.body.classList.contains("dark-mode")){
+        btn.innerHTML = "☀️ Light Mode";
+    } else {
+        btn.innerHTML = "🌙 Dark Mode";
+    }
+
+}

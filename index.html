@@ -1,6 +1,6 @@
-<!DOCTYPE html>
-
+ <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,81 +9,93 @@
     <link rel="stylesheet" href="css/style.css">
 
     <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 
 <body>
 
-    <!-- Header -->
+    <!-- HEADER -->
     <header>
         <div class="logo">
-            <h1>E-Commerce Product Catalog</h1>
+            <h1>🛍 ShopSphere</h1>
         </div>
 
         <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="products.html">Products</a></li>
-                <li><a href="product-details.html">Product Details</a></li>
-            </ul>
-        </nav>
+    <ul>
+        <li><a href="index.html">🏠 Home</a></li>
+        <li><a href="products.html">🛍 Products</a></li>
+        <li><a href="product-details.html">📦 Details</a></li>
+
+        <li>
+            <a href="#">
+                🛒 Cart (<span id="cartCount">0</span>)
+            </a>
+        </li>
+    </ul>
+</nav>
+
+     <button onclick="toggleTheme()" class="theme-btn">
+    🌙 Theme
+</button>
+
     </header>
 
-    <!-- Cart Counter -->
-    <div class="cart-section">
-        <h2>🛒 Shopping Cart</h2>
-        <p>Items in Cart: <span id="cartCount">0</span></p>
-    </div>
-
-    <!-- Hero Section -->
+    <!-- HERO -->
     <section class="hero">
         <div class="hero-content">
-            <h2>Discover Amazing Products</h2>
+            <h2>Shop Smarter, Live Better</h2>
+
             <p>
-                Explore a wide range of electronics, fashion,
-                accessories, books, and home essentials.
+                Discover premium electronics, fashion,
+                books and home essentials at unbeatable prices.
             </p>
 
-            <a href="products.html" class="btn">Shop Now</a>
+            <a href="products.html" class="btn">
+                Explore Products
+            </a>
         </div>
     </section>
 
-    <!-- Search Box -->
-    <div class="search-box">
-        <input type="text" placeholder="Search products...">
-        <button>Search</button>
-    </div>
+    <!-- SEARCH -->
+    <section class="search-section">
+        <div class="controls">
+            <input type="text" placeholder="Search products...">
+            <button>Search</button>
+        </div>
+    </section>
 
-    <!-- Categories -->
+    <!-- CATEGORIES -->
     <section class="categories">
+
         <h2>Shop by Category</h2>
 
         <div class="category-container">
 
             <div class="category-card">
                 <h3>💻 Electronics</h3>
-                <p>Laptops, Smartphones, Headphones & More</p>
+                <p>Laptops, Phones & Accessories</p>
             </div>
 
             <div class="category-card">
                 <h3>👕 Fashion</h3>
-                <p>Clothing, Shoes, Watches & Accessories</p>
+                <p>Trendy Clothing & Footwear</p>
             </div>
 
             <div class="category-card">
-                <h3>🏠 Home Appliances</h3>
-                <p>Kitchen and Household Essentials</p>
+                <h3>🏠 Home Essentials</h3>
+                <p>Kitchen & Home Products</p>
             </div>
 
             <div class="category-card">
                 <h3>📚 Books</h3>
-                <p>Educational and Entertainment Books</p>
+                <p>Learning & Entertainment</p>
             </div>
 
         </div>
+
     </section>
 
-    <!-- Featured Products -->
+    <!-- FEATURED PRODUCTS -->
     <section class="featured-products">
 
         <h2>Featured Products</h2>
@@ -91,110 +103,114 @@
         <div class="product-container">
 
             <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=800"
+                    alt="Laptop">
+
                 <h3>Gaming Laptop</h3>
-                <p>High-performance laptop for gaming and work.</p>
+
+                <p>Intel i7, 16GB RAM, 512GB SSD</p>
+
                 <strong>₹75,000</strong>
             </div>
 
             <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800"
+                    alt="Phone">
+
                 <h3>Smartphone</h3>
-                <p>Latest smartphone with advanced features.</p>
+
+                <p>50MP Camera, 8GB RAM</p>
+
                 <strong>₹30,000</strong>
             </div>
 
             <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=800"
+                    alt="Headphones">
+
                 <h3>Wireless Headphones</h3>
-                <p>Noise-cancelling premium sound experience.</p>
+
+                <p>Premium Sound Experience</p>
+
                 <strong>₹4,999</strong>
             </div>
 
         </div>
-    </section>
-
-    <!-- Stats -->
-    <section class="stats">
-
-        <div class="stat-card">
-            <h2>500+</h2>
-            <p>Products</p>
-        </div>
-
-        <div class="stat-card">
-            <h2>1000+</h2>
-            <p>Customers</p>
-        </div>
-
-        <div class="stat-card">
-            <h2>50+</h2>
-            <p>Brands</p>
-        </div>
 
     </section>
 
-    <!-- Top Brands -->
-    <section class="brands">
+    <section class="trending-products">
 
-        <h2>Top Brands</h2>
+    <h2>🔥 Trending Products</h2>
 
-        <div class="brand-container">
-            <div>Apple</div>
-            <div>Samsung</div>
-            <div>Sony</div>
-            <div>HP</div>
+    <div class="product-container">
+
+        <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=800" alt="Shoes">
+
+            <h3>Nike Shoes</h3>
+
+            <div class="rating">
+                ⭐⭐⭐⭐⭐
+            </div>
+
+            <p>Comfortable sports shoes</p>
+
+            <strong>₹3,999</strong>
         </div>
 
-    </section>
+        <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=800" alt="Watch">
 
-    <!-- About -->
+            <h3>Smart Watch</h3>
+
+            <div class="rating">
+                ⭐⭐⭐⭐☆
+            </div>
+
+            <p>Fitness & health tracking</p>
+
+            <strong>₹2,499</strong>
+        </div>
+
+        <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=800" alt="Headphones">
+
+            <h3>Gaming Headset</h3>
+
+            <div class="rating">
+                ⭐⭐⭐⭐⭐
+            </div>
+
+            <p>Premium surround sound</p>
+
+            <strong>₹3,499</strong>
+        </div>
+
+    </div>
+
+</section>
+
+    <!-- WHY CHOOSE US -->
     <section class="about">
 
         <h2>Why Choose Us?</h2>
 
         <p>
-            We provide quality products, secure shopping,
-            fast delivery, and excellent customer support
-            to ensure a great shopping experience.
+            Fast Delivery • Secure Payments • Easy Returns •
+            Trusted Quality Products
         </p>
 
     </section>
 
-    <!-- Testimonials -->
-    <section class="testimonials">
-
-        <h2>Customer Reviews</h2>
-
-        <div class="review-card">
-            ⭐⭐⭐⭐⭐
-            <p>Great quality products and fast delivery.</p>
-        </div>
-
-        <div class="review-card">
-            ⭐⭐⭐⭐⭐
-            <p>Excellent shopping experience.</p>
-        </div>
-
-    </section>
-
-    <!-- Newsletter -->
-    <section class="newsletter">
-
-        <h2>Subscribe for Updates</h2>
-
-        <input type="email" placeholder="Enter your email">
-
-        <button>Subscribe</button>
-
-    </section>
-
-    <!-- Contact Form -->
+    <!-- CONTACT -->
     <section class="contact">
 
         <h2>Contact Us</h2>
 
         <form onsubmit="return validateForm()">
 
-            <input
-                type="text"
+            <input type="text"
                 id="name"
                 placeholder="Enter your Name">
 
@@ -206,16 +222,14 @@
 
     </section>
 
-    <!-- Footer -->
+    <!-- FOOTER -->
     <footer>
 
         <div class="footer-content">
 
-            <h3>E-Commerce Product Catalog</h3>
+            <h3>ShopSphere</h3>
 
-            <p>
-                Your trusted online shopping destination.
-            </p>
+            <p>Your trusted online shopping destination.</p>
 
             <div class="social-links">
                 <a href="#">Facebook</a>
@@ -224,7 +238,7 @@
             </div>
 
             <p>
-                © 2026 E-Commerce Product Catalog |
+                © 2026 ShopSphere |
                 Designed by Darshana Selvakumar
             </p>
 
@@ -232,126 +246,7 @@
 
     </footer>
 
-<script src="script.js"></script>
-<section class="hero">
-    <div class="hero-content">
-        <h2>Big Summer Sale</h2>
-        <p>Up to 50% Off on Electronics & Fashion</p>
-        <a href="products.html" class="btn">Shop Now</a>
-    </div>
-</section>
-<div class="search-bar">
-    <input type="text" placeholder="Search products...">
-    <button>Search</button>
-</div>
-<section class="stats">
-    <div class="stat-card">
-        <h2>500+</h2>
-        <p>Products</p>
-    </div>
+    <script src="script.js"></script>
 
-    <div class="stat-card">
-        <h2>1000+</h2>
-        <p>Customers</p>
-    </div>
-
-    <div class="stat-card">
-        <h2>50+</h2>
-        <p>Brands</p>
-    </div>
-</section>
-<section class="testimonials">
-
-    <h2>Customer Reviews</h2>
-
-    <div class="review-card">
-        ⭐⭐⭐⭐⭐
-        <p>Great quality products and fast delivery.</p>
-    </div>
-
-    <div class="review-card">
-        ⭐⭐⭐⭐⭐
-        <p>Excellent shopping experience.</p>
-    </div>
-
-</section>
-<footer>
-
-<div class="footer-section">
-    <h3>About Us</h3>
-    <p>Your trusted online shopping destination.</p>
-</div>
-
-<div class="footer-section">
-    <h3>Quick Links</h3>
-    <a href="#">Home</a>
-    <a href="#">Products</a>
-</div>
-
-<div class="footer-section">
-    <h3>Contact</h3>
-    <p>Email: support@example.com</p>
-</div>
-
-</footer>
-<div class="search-box">
-    <input type="text" placeholder="Search products...">
-    <button>Search</button>
-</div>
-<li><a href="#">🛒 Cart</a></li>
-<div class="rating">
-    ⭐⭐⭐⭐⭐
-</div>
-<span class="sale-badge">20% OFF</span><section class="newsletter">
-    <h2>Subscribe for Updates</h2>
-    <input type="email" placeholder="Enter your email">
-    <button>Subscribe</button>
-</section>
-<footer>
-    <div class="footer-content">
-        <h3>E-Commerce Product Catalog</h3>
-        <p>Your trusted online shopping destination.</p>
-
-        <div class="social-links">
-            <a href="#">Facebook</a>
-            <a href="#">Instagram</a>
-            <a href="#">Twitter</a>
-        </div>
-    </div>
-</footer>
-<div class="filter-box">
-    <h3>Categories</h3>
-
-    <label>
-        <input type="checkbox">
-        Electronics
-    </label>
-
-    <label>
-        <input type="checkbox">
-        Fashion
-    </label>
-
-    <label>
-        <input type="checkbox">
-        Books
-    </label>
-</div>
-<section class="brands">
-    <h2>Top Brands</h2>
-
-    <div class="brand-container">
-        <div>Apple</div>
-        <div>Samsung</div>
-        <div>Sony</div>
-        <div>HP</div>
-    </div>
-</section>
-<h2>Contact Us</h2>
-
-<form onsubmit="return validateForm()">
-    <input type="text" id="name" placeholder="Enter your Name">
-    <button type="submit">Submit</button>
-</form>
 </body>
 </html>

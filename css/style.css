@@ -35,17 +35,18 @@ h1, h2, h3 {
 ========================= */
 
 header{
-    background:white;
-    padding:20px 40px;
-    box-shadow:0 4px 15px rgba(0,0,0,0.08);
+    background:#6d28d9;
+    color:white;
+    padding:20px;
 
     display:flex;
     justify-content:space-between;
     align-items:center;
+}
 
-    position:sticky;
-    top:0;
-    z-index:1000;
+nav{
+    display:flex;
+    gap:25px;
 }
 
 .logo h1 {
@@ -78,8 +79,8 @@ nav ul {
    HERO SECTION
 ========================= */
 
-.hero{
-    height:80vh;
+.hero {
+    height: 80vh;
 
     background:
     linear-gradient(
@@ -88,15 +89,15 @@ nav ul {
     ),
     url("https://images.unsplash.com/photo-1607082349566-187342175e2f?w=1600");
 
-    background-size:cover;
-    background-position:center;
+    background-size: cover;
+    background-position: center;
 
-    display:flex;
-    justify-content:center;
-    align-items:center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-    text-align:center;
-    color:white;
+    text-align: center;
+    color: white;
 }
 
 .hero-content {
@@ -438,4 +439,111 @@ footer{
 
 .product-card button{
     margin:5px;
+}
+
+/* =========================
+   NAVBAR CART BUTTON
+========================= */
+
+nav ul li:last-child a{
+    background:#ff6b6b;
+    color:white;
+    padding:8px 15px;
+    border-radius:20px;
+}
+
+nav ul li:last-child a:hover{
+    background:#ff5252;
+}
+
+/* =========================
+   TRENDING PRODUCTS
+========================= */
+
+.trending-products{
+    padding:60px 20px;
+    text-align:center;
+}
+
+.trending-products h2{
+    margin-bottom:30px;
+    color:#6C63FF;
+}
+
+/* =========================
+   DARK MODE
+========================= */
+
+.dark-mode{
+    background:#111827;
+    color:#ffffff;
+}
+
+/* Header */
+.dark-mode header{
+    background:#1f2937;
+}
+
+.dark-mode nav a,
+.dark-mode nav ul li a,
+.dark-mode h1,
+.dark-mode h2,
+.dark-mode h3,
+.dark-mode p{
+    color:white;
+}
+
+/* Cards */
+.dark-mode .product-card,
+.dark-mode .category-card,
+.dark-mode .cart-section,
+.dark-mode .review-card{
+    background:#1f2937;
+    color:white;
+}
+
+/* Inputs */
+.dark-mode input,
+.dark-mode select{
+    background:#374151;
+    color:white;
+    border:1px solid #6b7280;
+}
+
+/* Buttons */
+.dark-mode button,
+.dark-mode .btn{
+    background:#8b5cf6;
+    color:white;
+}
+
+.dark-mode button:hover,
+.dark-mode .btn:hover{
+    background:#7c3aed;
+}
+
+/* Footer */
+.dark-mode footer{
+    background:#0f172a;
+    color:white;
+}
+
+/* Tables */
+.dark-mode table{
+    background:#1f2937;
+    color:white;
+}
+
+.dark-mode table th{
+    background:#374151;
+}
+
+.dark-mode table td{
+    border:1px solid #4b5563;
+}
+
+/* Prices */
+.dark-mode strong,
+.dark-mode .price{
+    color:#fbbf24;
 }
