@@ -55,11 +55,12 @@
         onkeyup="searchProducts()">
 
     <select id="categoryFilter" onchange="filterProducts()">
-        <option value="all">All Categories</option>
-        <option value="Laptop">Laptop</option>
-        <option value="Smartphone">Smartphone</option>
-        <option value="Headphones">Headphones</option>
-    </select>
+    <option value="all">All Categories</option>
+    <option value="Electronics">Electronics</option>
+    <option value="Fashion">Fashion</option>
+    <option value="Home Essentials">Home Essentials</option>
+    <option value="Books">Books</option>
+</select>
 
 </div>
 <div class="product-container">
@@ -75,7 +76,7 @@
         View Cart
     </button>
 </div>
-<div class="product-card" data-category="Laptop">
+<div class="product-card" data-category="Electronics">
 
     <span class="sale-badge">20% OFF</span>
 
@@ -90,6 +91,10 @@
     <p>High-performance laptop for students.</p>
 
     <p><strong>₹75,000</strong></p>
+
+    <a href="product-details.html?product=laptop" class="btn">
+        View Details
+    </a>
 
     <button onclick="addToCart('Laptop')">
         Add to Cart
@@ -109,7 +114,7 @@
 
 </div>
 
-<div class="product-card" data-category="Smartphone">
+<div class="product-card" data-category="Electronics">
 
     <span class="sale-badge">15% OFF</span>
 
@@ -125,6 +130,10 @@
     <p>Latest smartphone with advanced features and premium camera.</p>
 
     <p><strong>₹30,000</strong></p>
+
+    <a href="product-details.html?product=smartphone" class="btn">
+        View Details
+    </a>
 
     <button onclick="addToCart('Smartphone')">
         🛒 Add to Cart
@@ -150,7 +159,7 @@
 
 </div>
 
-<div class="product-card" data-category="Headphones">
+<div class="product-card" data-category="Electronics">
 
     <span class="sale-badge">25% OFF</span>
 
@@ -166,6 +175,10 @@
     <p>Premium wireless headphones with active noise cancellation.</p>
 
     <p><strong>₹2,000</strong></p>
+
+    <a href="product-details.html?product=headphones" class="btn">
+    View Details
+</a>
 
     <button onclick="addToCart('Headphones')">
         🛒 Add to Cart
@@ -188,6 +201,475 @@
             ✔ Premium Sound Quality
         </p>
     </div>
+
+</div>
+
+<div class="product-card" data-category="Electronics">
+
+    <span class="sale-badge">15% OFF</span>
+
+    <img src="https://images.unsplash.com/photo-1546868871-7041f2a55e12?w=800" alt="Smart Watch">
+
+    <h3>Smart Watch</h3>
+
+    <p>Track fitness, calls, and notifications.</p>
+
+    <div class="rating">⭐⭐⭐⭐⭐</div>
+
+    <p><strong>₹4,999</strong></p>
+
+    <a href="product-details.html?product=Smart Watch" class="btn">
+    View Details
+</a>
+
+    <button onclick="addToCart('Smart Watch')">
+        Add to Cart
+    </button>
+
+    <button onclick="toggleDetails('watch')">
+        Show Details
+    </button>
+
+    <button>
+        ❤️ Wishlist
+    </button>
+
+    <div id="watch" style="display:none;">
+        <p>AMOLED Display | Heart Rate Monitor | 7 Days Battery</p>
+    </div>
+</div>
+
+<div class="product-card" data-category="Electronics">
+
+    <span class="sale-badge">20% OFF</span>
+
+    <img src="https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=800" alt="Tablet">
+
+    <h3>Tablet</h3>
+
+    <p>Perfect for study, entertainment and work.</p>
+
+    <div class="rating">⭐⭐⭐⭐☆</div>
+
+    <p><strong>₹18,999</strong></p>
+
+    <a href="product-details.html?product=Tablet" class="btn">
+    View Details
+</a>
+
+    <button onclick="addToCart('Tablet')">
+        Add to Cart
+    </button>
+
+    <button onclick="toggleDetails('tablet')">
+        Show Details
+    </button>
+
+    <button>
+        ❤️ Wishlist
+    </button>
+
+    <div id="tablet" style="display:none;">
+        <p>10.5-inch Display | 6GB RAM | 128GB Storage</p>
+    </div>
+</div>
+
+<div class="product-card" data-category="Electronics">
+
+    <span class="sale-badge">10% OFF</span>
+
+    <img src="https://images.unsplash.com/photo-1589003077984-894e133dabab?w=800" alt="Speaker">
+
+    <h3>Bluetooth Speaker</h3>
+
+    <p>Portable speaker with powerful bass.</p>
+
+    <div class="rating">⭐⭐⭐⭐⭐</div>
+
+    <p><strong>₹2,499</strong></p>
+
+    <a href="product-details.html?product=Bluetooth Speaker" class="btn">
+    View Details
+</a>
+
+    <button onclick="addToCart('Bluetooth Speaker')">
+        Add to Cart
+    </button>
+
+    <button onclick="toggleDetails('speaker')">
+        Show Details
+    </button>
+
+    <button>
+        ❤️ Wishlist
+    </button>
+
+    <div id="speaker" style="display:none;">
+        <p>Bluetooth 5.2 | Waterproof | 12 Hours Playback</p>
+    </div>
+</div>
+
+<div class="product-card" data-category="Fashion">
+
+    <span class="sale-badge">25% OFF</span>
+
+    <img src="https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=800" alt="Casual Shirt">
+
+    <h3>Men's Casual Shirt</h3>
+
+    <p>Comfortable cotton shirt for everyday wear.</p>
+
+    <div class="rating">⭐⭐⭐⭐⭐</div>
+
+    <p><strong>₹999</strong></p>
+
+    <a href="product-details.html?product=shirt" class="btn">
+    View Details
+</a>
+
+    <button onclick="addToCart('Casual Shirt')">Add to Cart</button>
+
+    <button onclick="toggleDetails('shirt')">Show Details</button>
+
+    <button>
+        ❤️ Wishlist
+    </button>
+
+    <div id="shirt" style="display:none;">
+        <p>100% Cotton | Slim Fit | Available in All Sizes</p>
+    </div>
+
+</div>
+
+<div class="product-card" data-category="Fashion">
+
+    <span class="sale-badge">30% OFF</span>
+
+    <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=800" alt="Sports Shoes">
+
+    <h3>Sports Shoes</h3>
+
+    <p>Lightweight running shoes with superior comfort.</p>
+
+    <div class="rating">⭐⭐⭐⭐⭐</div>
+
+    <p><strong>₹2,499</strong></p>
+
+    <a href="product-details.html?product=Sports Shoes" class="btn">
+    View Details
+</a>
+
+    <button onclick="addToCart('Sports Shoes')">Add to Cart</button>
+
+    <button onclick="toggleDetails('shoes')">Show Details</button>
+
+    <button>
+        ❤️ Wishlist
+    </button>
+
+    <div id="shoes" style="display:none;">
+        <p>Breathable Mesh | Anti-slip Sole | Running & Walking</p>
+    </div>
+
+</div>
+
+<div class="product-card" data-category="Fashion">
+
+    <span class="sale-badge">20% OFF</span>
+
+    <img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=800" alt="Handbag">
+
+    <h3>Women's Handbag</h3>
+
+    <p>Elegant handbag for casual and formal occasions.</p>
+
+    <div class="rating">⭐⭐⭐⭐☆</div>
+
+    <p><strong>₹1,499</strong></p>
+
+    <a href="product-details.html?product=Handbag" class="btn">
+    View Details
+</a>
+
+    <button onclick="addToCart('Handbag')">Add to Cart</button>
+
+    <button onclick="toggleDetails('bag')">Show Details</button>
+
+    <button>
+        ❤️ Wishlist
+    </button>
+
+    <div id="bag" style="display:none;">
+        <p>Premium Leather | Spacious Compartments | Stylish Design</p>
+    </div>
+
+</div>
+
+<div class="product-card" data-category="Fashion">
+
+    <span class="sale-badge">15% OFF</span>
+
+    <img src="https://images.unsplash.com/photo-1511499767150-a48a237f0083?w=800" alt="Sunglasses">
+
+    <h3>Smart Sunglasses</h3>
+
+    <p>Stylish UV-protected sunglasses for daily use.</p>
+
+    <div class="rating">⭐⭐⭐⭐⭐</div>
+
+    <p><strong>₹799</strong></p>
+
+    <a href="product-details.html?product=Sunglasses" class="btn">
+    View Details
+</a>
+
+    <button onclick="addToCart('Sunglasses')">Add to Cart</button>
+
+    <button onclick="toggleDetails('glass')">Show Details</button>
+
+    <button>
+        ❤️ Wishlist
+    </button>
+
+    <div id="glass" style="display:none;">
+        <p>UV400 Protection | Lightweight Frame | Trendy Design</p>
+    </div>
+
+</div>
+
+<div class="product-card" data-category="Home Essentials">
+
+    <span class="sale-badge">20% OFF</span>
+
+    <img src="https://images.unsplash.com/photo-1517668808822-9ebb02f2a0e6?w=800" alt="Coffee Maker">
+
+    <h3>Coffee Maker</h3>
+
+    <p>Brew fresh coffee at home in minutes.</p>
+
+    <div class="rating">⭐⭐⭐⭐⭐</div>
+
+    <p><strong>₹2,999</strong></p>
+
+    <a href="product-details.html?product=Coffee Maker" class="btn">
+    View Details
+</a>
+
+    <button onclick="addToCart('Coffee Maker')">Add to Cart</button>
+
+    <button onclick="toggleDetails('coffee')">Show Details</button>
+
+    <button>
+        ❤️ Wishlist
+    </button>
+
+    <div id="coffee" style="display:none;">
+        <p>1.5L Capacity | Auto Shut-Off | Easy Cleaning</p>
+    </div>
+
+</div>
+
+<div class="product-card" data-category="Home Essentials">
+
+    <span class="sale-badge">15% OFF</span>
+
+    <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=800" alt="Table Lamp">
+
+    <h3>Table Lamp</h3>
+
+    <p>Modern LED lamp for study and work.</p>
+
+    <div class="rating">⭐⭐⭐⭐☆</div>
+
+    <p><strong>₹1,199</strong></p>
+
+    <a href="product-details.html?product=Table Lamp" class="btn">
+    View Details
+</a>
+
+    <button onclick="addToCart('Table Lamp')">Add to Cart</button>
+
+    <button onclick="toggleDetails('lamp')">Show Details</button>
+
+    <button>
+        ❤️ Wishlist
+    </button>
+
+    <div id="lamp" style="display:none;">
+        <p>LED Light | Adjustable Brightness | Energy Saving</p>
+    </div>
+
+</div>
+
+<div class="product-card" data-category="Home Essentials">
+
+    <span class="sale-badge">25% OFF</span>
+
+    <img src="https://images.unsplash.com/photo-1585515656768-0c7d5e4b1b53?w=800" alt="Air Fryer">
+
+    <h3>Air Fryer</h3>
+
+    <p>Cook healthier meals with less oil.</p>
+
+    <div class="rating">⭐⭐⭐⭐⭐</div>
+
+    <p><strong>₹4,499</strong></p>
+
+    <a href="product-details.html?product=Air Fryer" class="btn">
+    View Details
+</a>
+
+    <button onclick="addToCart('Air Fryer')">Add to Cart</button>
+
+    <button onclick="toggleDetails('airfryer')">Show Details</button>
+
+    <button>
+        ❤️ Wishlist
+    </button>
+
+    <div id="airfryer" style="display:none;">
+        <p>4L Capacity | Digital Display | Rapid Air Technology</p>
+    </div>
+
+</div>
+
+<div class="product-card" data-category="Home Essentials">
+
+    <span class="sale-badge">30% OFF</span>
+
+    <img src="https://images.unsplash.com/photo-1558317374-067fb5f30001?w=800" alt="Vacuum Cleaner">
+
+    <h3>Vacuum Cleaner</h3>
+
+    <p>Powerful cleaning for home and office.</p>
+
+    <div class="rating">⭐⭐⭐⭐⭐</div>
+
+    <p><strong>₹5,999</strong></p>
+
+    <a href="product-details.html?product=Vacuum Cleaner" class="btn">
+    View Details
+</a>
+
+    <button onclick="addToCart('Vacuum Cleaner')">Add to Cart</button>
+
+    <button onclick="toggleDetails('vacuum')">Show Details</button>
+
+    <button>
+        ❤️ Wishlist
+    </button>
+
+    <div id="vacuum" style="display:none;">
+        <p>1200W Motor | HEPA Filter | Low Noise Design</p>
+    </div>
+
+</div>
+
+<div class="product-card" data-category="Books">
+
+    <span class="sale-badge">15% OFF</span>
+
+    <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794?w=800" alt="Book">
+
+    <h3>Rich Dad Poor Dad</h3>
+
+    <p>Personal finance and wealth-building guide.</p>
+
+    <div class="rating">⭐⭐⭐⭐⭐</div>
+
+    <p><strong>₹399</strong></p>
+
+    <a href="product-details.html?product=Rich Dad Poor Dad" class="btn">
+    View Details
+</a>
+
+    <button onclick="addToCart('Rich Dad Poor Dad')">Add to Cart</button>
+
+    <button class="wishlist-btn"
+    onclick="addToWishlist('Rich Dad Poor Dad')">
+        ❤️ Wishlist
+    </button>
+
+</div>
+
+<div class="product-card" data-category="Books">
+
+    <span class="sale-badge">20% OFF</span>
+
+    <img src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=800" alt="Atomic Habits">
+
+    <h3>Atomic Habits</h3>
+
+    <p>Build good habits and break bad ones.</p>
+
+    <div class="rating">⭐⭐⭐⭐⭐</div>
+
+    <p><strong>₹499</strong></p>
+
+    <a href="product-details.html?product=Atomic Habits" class="btn">
+    View Details
+</a>
+
+    <button onclick="addToCart('Atomic Habits')">Add to Cart</button>
+
+    <button class="wishlist-btn"
+    onclick="addToWishlist('Atomic Habits')">
+        ❤️ Wishlist
+    </button>
+
+</div>
+
+<div class="product-card" data-category="Books">
+
+    <span class="sale-badge">10% OFF</span>
+
+    <img src="https://images.unsplash.com/photo-1495446815901-a7297e633e8d?w=800" alt="The Alchemist">
+
+    <h3>The Alchemist</h3>
+
+    <p>An inspiring novel about following dreams.</p>
+
+    <div class="rating">⭐⭐⭐⭐⭐</div>
+
+    <p><strong>₹349</strong></p>
+
+    <a href="product-details.html?product=The Alchemist" class="btn">
+    View Details
+</a>
+
+    <button onclick="addToCart('The Alchemist')">Add to Cart</button>
+
+    <button class="wishlist-btn"
+    onclick="addToWishlist('The Alchemist')">
+        ❤️ Wishlist
+    </button>
+
+</div>
+
+<div class="product-card" data-category="Books">
+
+    <span class="sale-badge">25% OFF</span>
+
+    <img src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?w=800" alt="Think and Grow Rich">
+
+    <h3>Think and Grow Rich</h3>
+
+    <p>Classic success and self-development book.</p>
+
+    <div class="rating">⭐⭐⭐⭐⭐</div>
+
+    <p><strong>₹299</strong></p>
+
+    <a href="product-details.html?product=Think and Grow Rich" class="btn">
+    View Details
+</a>
+
+    <button onclick="addToCart('Think and Grow Rich')">Add to Cart</button>
+
+    <button class="wishlist-btn"
+    onclick="addToWishlist('Think and Grow Rich')">
+        ❤️ Wishlist
+    </button>
 
 </div>
 <script src="script.js"></script>

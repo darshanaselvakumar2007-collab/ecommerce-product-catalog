@@ -209,21 +209,21 @@ button:hover{
     transition: 0.3s;
 }
 
-.category-card:nth-child(1) {
-    background: linear-gradient(135deg, #667eea, #764ba2);
+.category-container a:nth-child(1) .category-card{
+    background: linear-gradient(135deg,#667eea,#764ba2);
 }
 
-.category-card:nth-child(2) {
-    background: linear-gradient(135deg, #ff9966, #ff5e62);
+.category-container a:nth-child(2) .category-card{
+    background: linear-gradient(135deg,#ff9966,#ff5e62);
 }
 
-.category-card:nth-child(3) {
-    background: linear-gradient(135deg, #11998e, #38ef7d);
+.category-container a:nth-child(3) .category-card{
+    background: linear-gradient(135deg,#11998e,#38ef7d);
 }
 
-.category-card:nth-child(4) {
-    background: linear-gradient(135deg, #f7971e, #ffd200);
-    color: #333;
+.category-container a:nth-child(4) .category-card{
+    background: linear-gradient(135deg,#f7971e,#ffd200);
+    color:#333;
 }
 
 .category-card:hover {
@@ -417,18 +417,15 @@ footer{
 }
 
 .sale-badge{
-    background:#ef4444;
+    background:linear-gradient(45deg,#ff416c,#ff4b2b);
     color:white;
-
-    padding:6px 12px;
-
+    padding:6px 14px;
     border-radius:20px;
-
     font-size:12px;
-
+    font-weight:bold;
     display:inline-block;
-
     margin-bottom:10px;
+    box-shadow:0 4px 10px rgba(255,75,43,0.3);
 }
 
 .rating{
@@ -546,4 +543,27 @@ nav ul li:last-child a:hover{
 .dark-mode strong,
 .dark-mode .price{
     color:#fbbf24;
+}
+
+.product-link{
+    text-decoration:none;
+    color:inherit;
+    display:block;
+}
+
+.product-link{
+    text-decoration:none;
+    color:inherit;
+}
+
+.product-link:hover{
+    text-decoration:none;
+}
+
+.search-btn{
+    background:#ff6b6b;
+}
+
+.search-btn:hover{
+    background:#e63946;
 }
