@@ -567,3 +567,82 @@ nav ul li:last-child a:hover{
 .search-btn:hover{
     background:#e63946;
 }
+
+/* ORDER PAGE */
+
+
+.order-section{
+
+width:500px;
+
+max-width:90%;
+
+margin:50px auto;
+
+background:white;
+
+padding:40px;
+
+border-radius:20px;
+
+box-shadow:0 10px 30px rgba(0,0,0,.1);
+
+text-align:center;
+
+}
+
+
+.order-section input,
+.order-section textarea{
+
+
+width:100%;
+
+padding:15px;
+
+margin:10px 0;
+
+border-radius:10px;
+
+border:1px solid #ddd;
+
+
+}
+
+
+.order-section textarea{
+
+height:120px;
+
+resize:none;
+
+}
+
+.confirmation{
+
+width:500px;
+
+max-width:90%;
+
+margin:100px auto;
+
+padding:50px;
+
+background:white;
+
+text-align:center;
+
+border-radius:20px;
+
+box-shadow:0 10px 30px rgba(0,0,0,.1);
+
+}
+
+
+.confirmation h1{
+
+color:#16a34a;
+
+margin-bottom:20px;
+
+}

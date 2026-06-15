@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+
+<title>Place Order</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+
+
+<body>
+
+
+<header>
+
+<h1>Checkout</h1>
+
+</header>
+
+
+
+<section class="order-section">
+
+
+<h2>Delivery Details</h2>
+
+
+<form onsubmit="confirmOrder(event)">
+
+
+<input 
+type="text"
+id="name"
+placeholder="Full Name"
+required>
+
+
+<input 
+type="text"
+id="phone"
+placeholder="Phone Number"
+required>
+
+
+<textarea
+id="address"
+placeholder="Delivery Address"
+required>
+</textarea>
+
+<input id="customerName"
+placeholder="Name">
+
+
+<input id="phone"
+placeholder="Phone Number">
+
+
+<input id="address"
+placeholder="Address">
+
+
+<button onclick="placeOrder()">
+Confirm Order
+</button>
+<h3>
+Product:
+<span id="orderProduct"></span>
+</h3>
+
+
+<h3>
+Price:
+<span id="orderPrice"></span>
+</h3>
+
+
+<button class="btn">
+
+Place Order
+
+</button>
+
+
+</form>
+
+
+</section>
+
+
+
+<script src="script.js"></script>
+
+
+</body>
+</html>

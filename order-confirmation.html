@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<title>Order Confirmation</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+
+
+<body>
+
+
+<section class="confirmation">
+
+
+<h1>
+🎉 Order Confirmed!
+</h1>
+
+
+<h2>
+Thank you for your purchase
+</h2>
+
+
+<p>
+Your order has been placed successfully.
+</p>
+
+
+<p>
+Customer:
+<span id="customer"></span>
+</p>
+
+
+<a href="index.html" class="btn">
+
+Continue Shopping
+
+</a>
+
+
+</section>
+
+
+
+<script>
+
+
+document.getElementById("customer").innerText =
+localStorage.getItem("customerName");
+
+
+</script>
+
+
+</body>
+
+</html>

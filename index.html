@@ -235,19 +235,49 @@
 
         <h2>Contact Us</h2>
 
-        <form onsubmit="return validateForm()">
+        <form onsubmit="return validateContact()">
 
-            <input type="text"
-                id="name"
-                placeholder="Enter your Name">
 
-            <button type="submit">
-                Submit
-            </button>
+<input 
+type="text"
+id="name"
+placeholder="Enter your Name">
 
-        </form>
+
+<input
+type="email"
+id="contactEmail"
+placeholder="Enter Email">
+
+
+<textarea
+id="message"
+placeholder="Enter Message">
+</textarea>
+
+
+<button type="submit">
+Submit
+</button>
+
+
+</form>
 
     </section>
+
+    <section>
+
+<h2>
+Latest Products
+</h2>
+
+
+<div id="apiProducts" class="product-container">
+
+</div>
+
+
+</section>
 
     <!-- FOOTER -->
     <footer>

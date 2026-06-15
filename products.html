@@ -19,10 +19,10 @@
         <li><a href="product-details.html">📦 Details</a></li>
 
         <li>
-            <a href="#">
-                🛒 Cart (<span id="cartCount">0</span>)
-            </a>
-        </li>
+<a href="#" onclick="viewCart()">
+🛒 Cart (<span id="cartCount">0</span>)
+</a>
+</li>
     </ul>
 </nav>
 
@@ -63,12 +63,7 @@
 </select>
 
 </div>
-<div class="product-container">
-
-</div>
-
-
-<div class="cart-section">
+ <div class="cart-section">
     <h2>🛒 Cart</h2>
     <p>Items in Cart: <span id="cartCount">0</span></p>
 
@@ -104,9 +99,9 @@
         Show Details
     </button>
 
-    <button>
-        ❤️ Wishlist
-    </button>
+    <button onclick="addToWishlist('Laptop')">
+❤️ Wishlist
+</button>
 
     <div id="laptop" style="display:none;">
         <p>16GB RAM | 512GB SSD | Intel i5 Processor</p>
@@ -143,9 +138,9 @@
         📋 Show Details
     </button>
 
-    <button>
-        ❤️ Wishlist
-    </button>
+    <button onclick="addToWishlist('Smartphone')">
+❤️ Wishlist
+</button>
 
     <div id="smartphone" style="display:none;">
         <p>
@@ -188,9 +183,9 @@
         📋 Show Details
     </button>
 
-    <button>
-        ❤️ Wishlist
-    </button>
+    <button onclick="addToWishlist('Headphones')">
+❤️ Wishlist
+</button>
 
     <div id="headphones" style="display:none;">
         <p>
@@ -218,7 +213,7 @@
 
     <p><strong>₹4,999</strong></p>
 
-    <a href="product-details.html?product=Smart Watch" class="btn">
+    <a href="product-details.html?product=smart watch" class="btn">
     View Details
 </a>
 
@@ -230,9 +225,9 @@
         Show Details
     </button>
 
-    <button>
-        ❤️ Wishlist
-    </button>
+    <button onclick="addToWishlist('Smart Watch')">
+❤️ Wishlist
+</button>
 
     <div id="watch" style="display:none;">
         <p>AMOLED Display | Heart Rate Monitor | 7 Days Battery</p>
@@ -253,7 +248,7 @@
 
     <p><strong>₹18,999</strong></p>
 
-    <a href="product-details.html?product=Tablet" class="btn">
+    <a href="product-details.html?product=tablet" class="btn">
     View Details
 </a>
 
@@ -265,9 +260,9 @@
         Show Details
     </button>
 
-    <button>
-        ❤️ Wishlist
-    </button>
+    <button onclick="addToWishlist('Tablet')">
+❤️ Wishlist
+</button>
 
     <div id="tablet" style="display:none;">
         <p>10.5-inch Display | 6GB RAM | 128GB Storage</p>
@@ -288,7 +283,7 @@
 
     <p><strong>₹2,499</strong></p>
 
-    <a href="product-details.html?product=Bluetooth Speaker" class="btn">
+    <a href="product-details.html?product=bluetooth speaker" class="btn">
     View Details
 </a>
 
@@ -300,9 +295,9 @@
         Show Details
     </button>
 
-    <button>
-        ❤️ Wishlist
-    </button>
+    <button onclick="addToWishlist('Bluetooth Speaker')">
+❤️ Wishlist
+</button>
 
     <div id="speaker" style="display:none;">
         <p>Bluetooth 5.2 | Waterproof | 12 Hours Playback</p>
@@ -331,9 +326,9 @@
 
     <button onclick="toggleDetails('shirt')">Show Details</button>
 
-    <button>
-        ❤️ Wishlist
-    </button>
+    <button onclick="addToWishlist('Casual Shirt')">
+❤️ Wishlist
+</button>
 
     <div id="shirt" style="display:none;">
         <p>100% Cotton | Slim Fit | Available in All Sizes</p>
@@ -355,7 +350,7 @@
 
     <p><strong>₹2,499</strong></p>
 
-    <a href="product-details.html?product=Sports Shoes" class="btn">
+    <a href="product-details.html?product=sports shoes" class="btn">
     View Details
 </a>
 
@@ -363,9 +358,9 @@
 
     <button onclick="toggleDetails('shoes')">Show Details</button>
 
-    <button>
-        ❤️ Wishlist
-    </button>
+    <button onclick="addToWishlist('Sports Shoes')">
+❤️ Wishlist
+</button>
 
     <div id="shoes" style="display:none;">
         <p>Breathable Mesh | Anti-slip Sole | Running & Walking</p>
@@ -387,7 +382,7 @@
 
     <p><strong>₹1,499</strong></p>
 
-    <a href="product-details.html?product=Handbag" class="btn">
+    <a href="product-details.html?product=handbag" class="btn">
     View Details
 </a>
 
@@ -395,9 +390,9 @@
 
     <button onclick="toggleDetails('bag')">Show Details</button>
 
-    <button>
-        ❤️ Wishlist
-    </button>
+    <button onclick="addToWishlist('Handbag')">
+❤️ Wishlist
+</button>
 
     <div id="bag" style="display:none;">
         <p>Premium Leather | Spacious Compartments | Stylish Design</p>
@@ -419,7 +414,7 @@
 
     <p><strong>₹799</strong></p>
 
-    <a href="product-details.html?product=Sunglasses" class="btn">
+    <a href="product-details.html?product=sunglasses" class="btn">
     View Details
 </a>
 
@@ -427,9 +422,9 @@
 
     <button onclick="toggleDetails('glass')">Show Details</button>
 
-    <button>
-        ❤️ Wishlist
-    </button>
+    <button onclick="addToWishlist('Sunglasses')">
+❤️ Wishlist
+</button>
 
     <div id="glass" style="display:none;">
         <p>UV400 Protection | Lightweight Frame | Trendy Design</p>
@@ -451,7 +446,7 @@
 
     <p><strong>₹2,999</strong></p>
 
-    <a href="product-details.html?product=Coffee Maker" class="btn">
+    <a href="product-details.html?product=coffee maker" class="btn">
     View Details
 </a>
 
@@ -459,9 +454,9 @@
 
     <button onclick="toggleDetails('coffee')">Show Details</button>
 
-    <button>
-        ❤️ Wishlist
-    </button>
+    <button onclick="addToWishlist('Coffee Maker')">
+❤️ Wishlist
+</button>
 
     <div id="coffee" style="display:none;">
         <p>1.5L Capacity | Auto Shut-Off | Easy Cleaning</p>
@@ -483,7 +478,7 @@
 
     <p><strong>₹1,199</strong></p>
 
-    <a href="product-details.html?product=Table Lamp" class="btn">
+    <a href="product-details.html?product=table lamp" class="btn">
     View Details
 </a>
 
@@ -491,9 +486,9 @@
 
     <button onclick="toggleDetails('lamp')">Show Details</button>
 
-    <button>
-        ❤️ Wishlist
-    </button>
+    <button onclick="addToWishlist('lamp')">
+❤️ Wishlist
+</button>
 
     <div id="lamp" style="display:none;">
         <p>LED Light | Adjustable Brightness | Energy Saving</p>
@@ -515,7 +510,7 @@
 
     <p><strong>₹4,499</strong></p>
 
-    <a href="product-details.html?product=Air Fryer" class="btn">
+    <a href="product-details.html?product=air fryer" class="btn">
     View Details
 </a>
 
@@ -523,9 +518,9 @@
 
     <button onclick="toggleDetails('airfryer')">Show Details</button>
 
-    <button>
-        ❤️ Wishlist
-    </button>
+    <button onclick="addToWishlist('airfryer')">
+❤️ Wishlist
+</button>
 
     <div id="airfryer" style="display:none;">
         <p>4L Capacity | Digital Display | Rapid Air Technology</p>
@@ -547,7 +542,7 @@
 
     <p><strong>₹5,999</strong></p>
 
-    <a href="product-details.html?product=Vacuum Cleaner" class="btn">
+    <a href="product-details.html?product=vacuum cleaner" class="btn">
     View Details
 </a>
 
@@ -555,9 +550,9 @@
 
     <button onclick="toggleDetails('vacuum')">Show Details</button>
 
-    <button>
-        ❤️ Wishlist
-    </button>
+    <button onclick="addToWishlist('vacuum')">
+❤️ Wishlist
+</button>
 
     <div id="vacuum" style="display:none;">
         <p>1200W Motor | HEPA Filter | Low Noise Design</p>
@@ -579,7 +574,7 @@
 
     <p><strong>₹399</strong></p>
 
-    <a href="product-details.html?product=Rich Dad Poor Dad" class="btn">
+    <a href="product-details.html?product=rich dad poor dad" class="btn">
     View Details
 </a>
 
@@ -606,7 +601,7 @@
 
     <p><strong>₹499</strong></p>
 
-    <a href="product-details.html?product=Atomic Habits" class="btn">
+    <a href="product-details.html?product=atomic habits" class="btn">
     View Details
 </a>
 
@@ -633,7 +628,7 @@
 
     <p><strong>₹349</strong></p>
 
-    <a href="product-details.html?product=The Alchemist" class="btn">
+    <a href="product-details.html?product=the alchemist" class="btn">
     View Details
 </a>
 
@@ -660,7 +655,7 @@
 
     <p><strong>₹299</strong></p>
 
-    <a href="product-details.html?product=Think and Grow Rich" class="btn">
+    <a href="product-details.html?product=think and grow rich" class="btn">
     View Details
 </a>
 
