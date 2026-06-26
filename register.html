@@ -18,45 +18,31 @@
 <body>
 
 
-<section class="auth-box">
+<form onsubmit="registerUser(event)">
 
-
-<h2>Create Account</h2>
-
-
-<input 
-type="text"
+ <input 
 id="regName"
+type="text"
 placeholder="Full Name">
 
 
-<input
-type="email"
+<input 
 id="regEmail"
+type="email"
 placeholder="Email">
 
 
-<input
-type="password"
+<input 
 id="regPassword"
+type="password"
 placeholder="Password">
 
-
-<button onclick="registerUser()">
-
+<button type="submit">
 Register
 
 </button>
 
-
-<p>
-Already have an account?
-
-<a href="login.html">
-Login
-</a>
-
-</p>
+</form>
 
 
 </section>
