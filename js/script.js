@@ -7,7 +7,137 @@ let cart = JSON.parse(localStorage.getItem("cart")) || [];
 let wishlist =
 JSON.parse(localStorage.getItem("wishlist")) || [];
 
+// ===============================
+// LOAD PRODUCTS FROM API
+// ===============================
 
+
+async function loadProducts(){
+
+    const container =
+    document.getElementById("productsContainer");
+
+
+    const loading =
+    document.getElementById("loading");
+
+
+    try{
+
+        const response =
+        await fetch(
+`https://ecommerce-product-catalog-b5n0.onrender.com/api/products/${id}`
+);;
+
+
+        const products =
+        await response.json();
+
+
+        loading.style.display="none";
+
+
+        if(products.length === 0){
+
+            container.innerHTML =
+            `
+            <h3>No products available</h3>
+            `;
+
+            return;
+
+        }
+
+
+        container.innerHTML="";
+
+
+        products.forEach(product=>{
+
+
+            container.innerHTML += `
+
+            <div class="product-card"
+            data-category="${product.category}">
+
+
+                <img 
+                src="${product.image || 'images/default.jpg'}"
+                alt="${product.name}">
+
+
+                <h3>${product.name}</h3>
+
+
+                <p>
+                ${product.description || "No description available"}
+                </p>
+
+
+                <p>
+                <strong>
+                ₹${product.price}
+                </strong>
+                </p>
+
+
+                <button onclick="addToCart('${product.name}')">
+                🛒 Add to Cart
+                </button>
+
+
+                <a href="product-details.html?id=${product.id}"
+                class="btn">
+                View Details
+                </a>
+
+
+            </div>
+
+            `;
+
+
+        });
+
+
+    }
+
+
+    catch(error){
+
+
+        console.log(error);
+
+
+        loading.style.display="none";
+
+
+        container.innerHTML=
+        `
+        <div class="error-box">
+
+        <h3>
+        ⚠ Failed to load products
+        </h3>
+
+        <p>
+        Please check your server connection
+        </p>
+
+        </div>
+        `;
+
+
+    }
+
+
+}
+
+
+
+// Call function when page loads
+
+loadProducts();
 
 /* =========================================
    2. PAGE LOAD
@@ -39,7 +169,7 @@ document.addEventListener("DOMContentLoaded", () => {
 function updateCartCount(){
 
     let count =
-    document.getElementById("cartCount");
+    document.querySelectorAll("#cartCount, #cartCountSection");
 
 
     if(count){
@@ -170,19 +300,18 @@ function viewWishlist(){
 ========================================= */
 
 
+// SEARCH PRODUCTS
+
 function searchProducts(){
 
-
-    let input =
-    document.getElementById("searchInput")
+    let input = document
+    .getElementById("searchInput")
     .value
     .toLowerCase();
 
 
-
     let products =
     document.querySelectorAll(".product-card");
-
 
 
     products.forEach(card=>{
@@ -194,86 +323,75 @@ function searchProducts(){
         .toLowerCase();
 
 
+        let description =
+        card.querySelector("p")
+        .innerText
+        .toLowerCase();
 
-        if(name.includes(input)){
 
+        if(
+            name.includes(input) ||
+            description.includes(input)
+        ){
 
             card.style.display="block";
-
 
         }
 
         else{
 
-
             card.style.display="none";
-
 
         }
 
 
     });
 
-
 }
-
-
-
 
 /* =========================================
    6. CATEGORY FILTER
 ========================================= */
 
+// FILTER PRODUCTS BY CATEGORY
 
 function filterProducts(){
 
-
-    let selected =
+    let category =
     document.getElementById("categoryFilter")
     .value;
-
 
 
     let products =
     document.querySelectorAll(".product-card");
 
 
+    products.forEach(card=>{
 
-    products.forEach(product=>{
 
-
-        let category =
-        product.dataset.category;
-
+        let productCategory =
+        card.getAttribute("data-category");
 
 
         if(
-            selected==="all" ||
-            category===selected
+            category === "all" ||
+            productCategory === category
         ){
 
-
-            product.style.display="block";
-
+            card.style.display="block";
 
         }
 
         else{
 
-
-            product.style.display="none";
-
+            card.style.display="none";
 
         }
 
 
     });
 
-
 }
-
-
-
 
 
 /* =========================================
@@ -318,224 +436,6 @@ function toggleTheme(){
 
 
 }
-/* =========================================
-   8. PRODUCT DETAILS DATA
-========================================= */
-
-
-const productData = {
-
-
-smartphone:{
-title:"Smartphone",
-image:"https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800",
-price:"₹30,000",
-description:
-"Latest smartphone with advanced camera, powerful processor and premium design.",
-features:[
-"6.7-inch AMOLED Display",
-"8GB RAM",
-"128GB Storage",
-"50MP AI Camera",
-"5000mAh Battery"
-]
-},
-
-
-headphones:{
-title:"Wireless Headphones",
-image:"https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=800",
-price:"₹4,999",
-description:
-"Premium wireless headphones with noise cancellation and high quality audio.",
-features:[
-"Bluetooth 5.0",
-"Active Noise Cancellation",
-"20 Hours Battery",
-"Deep Bass Sound",
-"Comfort Ear Cushions"
-]
-},
-
-
-smartwatch:{
-title:"Smart Watch",
-image:"https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=800",
-price:"₹4,999",
-description:
-"Fitness smartwatch with health tracking and notifications.",
-features:[
-"Heart Rate Monitoring",
-"Sleep Tracking",
-"Fitness Modes",
-"Bluetooth Calling",
-"Water Resistant"
-]
-},
-
-
-tablet:{
-title:"Tablet",
-image:"https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=800",
-price:"₹18,999",
-description:
-"Powerful tablet for entertainment and professional work.",
-features:[
-"10.5 inch Display",
-"6GB RAM",
-"128GB Storage",
-"Long Battery Life",
-"High Performance Processor"
-]
-},
-
-
-speaker:{
-title:"Bluetooth Speaker",
-image:"https://images.unsplash.com/photo-1589003077984-894e133dabab?w=800",
-price:"₹2,499",
-description:
-"Portable speaker with powerful sound and deep bass.",
-features:[
-"Bluetooth 5.0",
-"10 Hour Playback",
-"HD Stereo Sound",
-"Water Resistant",
-"Portable Design"
-]
-},
-
-
-shirt:{
-title:"Men's Casual Shirt",
-image:"https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=800",
-price:"₹999",
-description:
-"Comfortable cotton casual shirt for daily wear.",
-features:[
-"100% Cotton",
-"Slim Fit",
-"Breathable Fabric",
-"Machine Washable",
-"Premium Quality"
-]
-},
-
-
-shoe:{
-title:"Sports Shoes",
-image:"https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=800",
-price:"₹2,499",
-description:
-"Lightweight sports shoes designed for comfort.",
-features:[
-"Running Support",
-"Soft Cushioning",
-"Anti Slip Sole",
-"Breathable Material",
-"Durable Design"
-]
-},
-
-
-handbag:{
-title:"Women's Handbag",
-image:"https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=800",
-price:"₹1,999",
-description:
-"Stylish handbag for everyday fashion.",
-features:[
-"Premium Material",
-"Spacious Storage",
-"Elegant Design",
-"Strong Handle",
-"Lightweight"
-]
-},
-
-
-sunglass:{
-title:"Smart Sunglasses",
-image:"https://images.unsplash.com/photo-1511499767150-a48a237f0083?w=800",
-price:"₹2,999",
-description:
-"Modern smart sunglasses with stylish design.",
-features:[
-"UV Protection",
-"Bluetooth Support",
-"Lightweight Frame",
-"Premium Lens",
-"Comfort Fit"
-]
-},
-
-
-coffee:{
-title:"Coffee Maker",
-image:"https://images.unsplash.com/photo-1517668808822-9ebb02f2a0e6?w=800",
-price:"₹2,999",
-description:
-"Automatic coffee maker for fresh coffee at home.",
-features:[
-"Quick Brewing",
-"Easy Cleaning",
-"Compact Design",
-"Energy Efficient",
-"Premium Build"
-]
-},
-
-
-lamp:{
-title:"Table Lamp",
-image:"https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=800",
-price:"₹1,199",
-description:
-"Modern LED table lamp for home and office.",
-features:[
-"LED Lighting",
-"Low Power Usage",
-"Adjustable Brightness",
-"Modern Design",
-"Eye Protection"
-]
-},
-
-
-airfryer:{
-title:"Air Fryer",
-image:"https://images.unsplash.com/photo-1585515656768-0c7d5e4b1b53?w=800",
-price:"₹4,499",
-description:
-"Healthy cooking with less oil.",
-features:[
-"Oil Free Cooking",
-"Digital Controls",
-"Large Capacity",
-"Easy Cleaning",
-"Fast Cooking"
-]
-},
-
-
-vacuum:{
-title:"Vacuum Cleaner",
-image:"https://images.unsplash.com/photo-1558317374-067fb5f30001?w=800",
-price:"₹5,999",
-description:
-"Powerful cleaner for home cleaning.",
-features:[
-"Strong Suction",
-"Multiple Modes",
-"Lightweight",
-"Low Noise",
-"Easy Storage"
-]
-}
-
-
-};
-
 
 /* =========================================
    9. LOAD PRODUCT DETAILS PAGE
@@ -736,3 +636,95 @@ alert("Order Confirmed!");
 window.location.href=
 "order-confirmation.html";
 }
+
+// LOAD SINGLE PRODUCT DETAILS
+
+
+async function loadProductDetails(){
+
+    const params =
+    new URLSearchParams(
+        window.location.search
+    );
+
+
+    const id =
+    params.get("id");
+
+
+    if(!id) return;
+
+
+    try{
+
+
+        const response =
+await fetch(`${API_URL}/api/products`);
+
+
+if(!response.ok){
+
+throw new Error("API Error");
+
+}
+
+
+        const product =
+        await response.json();
+
+
+
+        document.getElementById(
+            "productTitle"
+        ).innerText =
+        product.name;
+
+
+
+        document.getElementById(
+            "productPrice"
+        ).innerText =
+        "₹" + product.price;
+
+
+
+        document.getElementById(
+            "productDescription"
+        ).innerText =
+        product.description;
+
+
+
+        document.getElementById(
+            "productImage"
+        ).src =
+        product.image;
+
+
+
+        document.getElementById(
+            "productFeatures"
+        ).innerHTML =
+        `
+        <li>Category: ${product.category}</li>
+        <li>Premium Quality Product</li>
+        <li>Fast Delivery Available</li>
+        <li>Easy Returns</li>
+        `;
+
+
+
+    }
+
+    catch(error){
+
+        console.log(
+        "Product details error:",
+        error
+        );
+
+    }
+
+}
+
+loadProductDetails();

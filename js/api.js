@@ -1,0 +1,1 @@
+const API_URL = "https://ecommerce-product-catalog-b5n0.onrender.com";
